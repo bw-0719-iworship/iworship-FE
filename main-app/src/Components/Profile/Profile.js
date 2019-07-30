@@ -14,7 +14,7 @@ function Profile() {
     width: 200px;
     border: 2px solid red;
     display: flex;
-    align-item: center;
+    /* align-item: center; */
   `;
 
   const ImageUser = styled.img`
