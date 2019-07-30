@@ -6,15 +6,14 @@ const CardsList = ({ first_name, last_name, gender, email }) => {
     console.log(email)
 
     return(
-        <div className='peggy'>
-
-            <p>Email: {email}</p>
+        <div className='cardDetails'>
 
             <p>Name: {first_name} {last_name}</p>
 
+            <p>{email}</p>
+
             <p>Gender: {gender}</p>
 
-            loololol.exe
         </div>
     )
 

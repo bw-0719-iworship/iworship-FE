@@ -20,7 +20,7 @@ export default function Cards() {
 
 
     return(
-        <div>
+        <div className='peggy'>
 
             {churches.map(e => (
                 <CardsList {...e} />
