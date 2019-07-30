@@ -1,13 +1,14 @@
 import React from 'react';
-import { Home, Search } from "./Components";
+import Home from "./components/Home.js";
+import Search from "./components/Search.js";
+import NavBar from "./components/NavBar.js";
 import { Route } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      hello, dis iz meh app
 
       <Route exact path="/" component={Home} />
       <Route path="/search" component={Search} />
