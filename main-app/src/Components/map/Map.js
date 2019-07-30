@@ -15,16 +15,20 @@ const Map = () => {
         <MapData   
         style="mapbox://styles/mapbox/streets-v9"
         containerStyle={{
-          height: "100vh",
-          width: "100vw"
-        }}>
+          height: "60vh",
+          width: "60vw"
+
+         
+        }}  center={[-77.0364, 38.8951]}>
 
             <Layer
             type="symbol"
             id="marker"
-            layout={{ "icon-image": "marker-15" }}>
+            layout={{ "icon-image": "marker-15" }}
+            >
+               {/* Marker display loop */}
 
-            <Feature coordinates={[-0.481747846041145, 51.3233379650232]}/>
+            <Feature coordinates={[38.2700, 89.8603]}/>
 
             </Layer>
 
