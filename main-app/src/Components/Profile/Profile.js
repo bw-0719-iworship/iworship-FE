@@ -13,8 +13,8 @@ function Profile() {
     height: 200px;
     width: 200px;
     border: 2px solid red;
-    align-item: center;
     display: flex;
+    /* align-item: center; */
   `;
 
   const ImageUser = styled.img`
@@ -22,11 +22,10 @@ function Profile() {
     width: 100px;
     border: 2px solid black;
     margin: 10px auto;
-    src="../assets/user.jpg";
   `;
 
   const InfoSite = styled.div`
-    width: 200px
+    width: 200px;
     padding: 10px;
     border: 2px solid red;
   `;
