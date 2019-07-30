@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../styles/NavBar.scss"
 
@@ -7,17 +7,15 @@ function NavBar() {
 
   return (
     <div className="nav-bar">
-      <div>
-        <h1>iWorship</h1>
+      <div className="title">
+        <Link to="/"><h1>iWorship</h1></Link>
       </div>
-      <nav>
-        <div>
-          <Link to="/">Home</Link>
-        </div>
-        <div>
-          <Link to="/search">Search</Link>
-        </div>
-      </nav>
+      <div classnName="link">
+        <Link to="/">Home</Link>
+      </div>
+      <div className="link">
+        <Link to="/search">Search</Link>
+      </div>
     </div>
   );
 };
