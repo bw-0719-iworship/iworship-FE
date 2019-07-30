@@ -13,14 +13,16 @@ function Profile() {
     height: 200px;
     width: 200px;
     border: 2px solid red;
+    align-item: center;
+    display: flex;
   `;
 
   const ImageUser = styled.img`
-    src="./assets/user.jpg";
     height: 100px;
     width: 100px;
     border: 2px solid black;
     margin: 10px auto;
+    src="../assets/user.jpg";
   `;
 
   const InfoSite = styled.div`
@@ -36,7 +38,7 @@ function Profile() {
   return (
     <LayoutSideBar>
       <InfoUser>
-        <ImageUser />
+        <ImageUser src="../assets/user.jpg" alt="Profile" />
       </InfoUser>
       <InfoSite>
         <TextSite>Lorem Ipsum</TextSite>
