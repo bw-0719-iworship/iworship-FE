@@ -1,9 +1,9 @@
 import React from 'react';
+import './styles/index.scss';
 import Home from "./components/Home.js";
 import Search from "./components/Search.js";
 import NavBar from "./components/NavBar.js";
 import { Route } from "react-router-dom";
-import Cards from './components/grid/Cards'
 
 function App() {
   return (
