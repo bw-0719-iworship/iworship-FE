@@ -1,18 +1,28 @@
-@import "variables.scss";
+$blue: #2f89fc;
 
 .nav-bar {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  height: 50px;
+  padding: 0 15px;
 
   .title {
-
     h1 {
-      font-size: 2.8rem;
+      font-size: 3.6rem;
+      line-height: 50px;
       color: $blue;
     }
+  }
 
-    link {
-      color: $blue;
+  .links {
+    display: flex;
+
+    .link {
+      line-height: 50px;
+      font-size: 1.6rem;
+      padding-left: 50px;
+      color: #2f89fc;;
     }
   }
 }
