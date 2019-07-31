@@ -1,9 +1,9 @@
 import React from "react";
 
-import Cards from './grid/Cards'
-import Map from './map/Map'
+import Cards from './grid/Cards';
+
 import Profile from "./Profile/Profile";
-import NavBar from './NavBar/NavBar'
+import NavBar from './NavBar/NavBar';
 
 
 
@@ -16,11 +16,11 @@ function Home() {
       <div className='homeComp'>
         <Profile />
       </div>
-      
+
       <div className='homeComp'>
         <NavBar />
 
-        <Map />
+
 
         <Cards />
 
