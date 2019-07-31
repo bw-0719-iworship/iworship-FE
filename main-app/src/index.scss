@@ -53,8 +53,10 @@ code {
 .home{
   display: flex;
   justify-content: space-evenly;
+  // align-items: baseline; 
 }
 
 .homeComp{
   margin: 1rem;
+  align-self: center;
 }
