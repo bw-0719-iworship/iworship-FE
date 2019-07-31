@@ -3,7 +3,7 @@ import React from 'react'
 
 const CardsList = ({ first_name, last_name, gender, email }) => {
 
-    console.log(email)
+    // console.log(email)
 
     return(
         <div className='cardDetails'>
