@@ -1,28 +1,21 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import React from "react";
 import CardsList from './CardsList'
+
+import { CardsContext } from '../context/CardsContext'
+import { useContext } from 'react';
 
 
 
 
 export default function Cards() {
 
-    const [churches, setChurches] = useState([])
-
-
-    useEffect( () => {
-        axios.get('https://api.myjson.com/bins/7gt6p')
-        .then(res => {
-            console.log(res)
-            setChurches(res.data)
-        })
-    }, [])
+    const state = useContext(CardsContext)
 
 
     return(
         <div className='cardContainer'>
 
-            {churches.map(e => (
+            {state.map(e => (
                 <CardsList {...e} />
             ))}
 
