@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 
+
 import Cards from './grid/Cards'
 // import Map from './map/Map'
 import Profile from "./Profile/Profile";
-import NavBar from './NavBar/NavBar'
+import NavBar from './NavBar/NavBar';
 
 import { CardsContext } from './context/CardsContext'
 
