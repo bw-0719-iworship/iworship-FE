@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function PlaceOfWorship(props) {
+function PlaceOfWorshipCard(props) {
   const [placeOfWorship, setPlaceOfWorship] = useState({});
 
   return (
@@ -8,4 +8,6 @@ function PlaceOfWorship(props) {
       <h2>{props.NAME}</h2>
     </div>
   )
-}
+};
+
+export default PlaceOfWorshipCard;

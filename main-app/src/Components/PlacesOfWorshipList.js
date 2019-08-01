@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import PlaceOfWorshipCard from "./PlaceOfWorshipCard.js";
 
 function Form(props) {
   const [placesOfWorship, setPlacesOfWorship] = useState([]);
