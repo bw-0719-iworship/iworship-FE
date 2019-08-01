@@ -10,7 +10,7 @@ import NavBar from './NavBar/NavBar';
 import { CardsContext } from './context/CardsContext'
 
 
-// New data with lat and long 
+// New data with lat and long
 // https://api.myjson.com/bins/1apvk1
 
 // older data just basic n/e/g
