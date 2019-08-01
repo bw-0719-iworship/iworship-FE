@@ -1,18 +1,18 @@
-// import React from 'react';
+import React from 'react';
 
-// import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
 
-// import { CardsContext } from '../context/CardsContext'
-// import { useContext } from 'react';
+import { CardsContext } from '../context/CardsContext'
+import { useContext } from 'react';
 
 // const coords= [{lat: 40.560001, long: -74.290001}]
 
 
-//   const MapData = ReactMapboxGl({
-//     accessToken: "pk.eyJ1IjoibWFkaXNvbi1tY2tvd24iLCJhIjoiY2p5cTQ3NGJ5MW1kNDNtczhyd3Njdm1jbyJ9.nBC37rZnhwGXRe9TCfRnKg",
-//   });
+  // const MapData = ReactMapboxGl({
+  //   accessToken: "pk.eyJ1IjoibWFkaXNvbi1tY2tvd24iLCJhIjoiY2p5cTQ3NGJ5MW1kNDNtczhyd3Njdm1jbyJ9.nBC37rZnhwGXRe9TCfRnKg",
+  // });
 
-// //coordinates={[church.latitude, church.longitude]}
+//coordinates={[church.latitude, church.longitude]}
 
 // const Map = () => {
 
@@ -20,64 +20,72 @@
 
 //   console.log(state)
 
+{/* <img src={require ('../../assets/drawing.svg')} alt='heart for churches' /> */}
 
 
-// import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
-//
-//
-//
-// const MapData = ReactMapboxGl({
-//     accessToken: "pk.eyJ1IjoibWFkaXNvbi1tY2tvd24iLCJhIjoiY2p5cTQ3NGJ5MW1kNDNtczhyd3Njdm1jbyJ9.nBC37rZnhwGXRe9TCfRnKg"
-//   });
-//
-//
-//
-// const Map = () => {
-//
-
-//     return(
-//         <MapData
-//         style="mapbox://styles/mapbox/streets-v9"
-//         containerStyle={{
-//           height: "60vh",
-
-//           width: "60vw"         
-//         }}  
-//         center={[-77.0364, 38.8951]}>
+const MapData = ReactMapboxGl({
+    accessToken: "pk.eyJ1IjoibWFkaXNvbi1tY2tvd24iLCJhIjoiY2p5cTQ3NGJ5MW1kNDNtczhyd3Njdm1jbyJ9.nBC37rZnhwGXRe9TCfRnKg"
+  });
 
 
-//           width: "60vw"
-//
-//
-//         }}  center={[-77.0364, 38.8951]}>
-//
 
-//             <Layer
-//             type="symbol"
-//             id="marker"
-//             layout={{ "icon-image": "marker-15" }}
-//             >
-
-//                {coords.map(church => (
-//                  <Marker key={church.id} coordinates={[church.lat, church.long]} >
-
-                 
-//                      <img src={require ('../../assets/drawing.svg')} alt='heart for churches' /> 
-                 
-                 
-//                  </Marker>
-//                ))}
-
-//             {/* {/* <Feature coordinates={[38.2700, 89.8603]}/> */}
-
-//             </Layer> */}
+const Map = () => {
 
 
-//         </MapData>
-//     )
-// }
 
-// export default Map
+    const state = useContext(CardsContext)
+    console.log(state)
+
+    // function newState(){
+    //   {state.map(e => {
+    //     return {
+    //       lat: e.latitude,
+    //       long: e.longitude
+    //     }
+    //   })}
+    // }
+
+
+    function renderingMap(){
+      
+      {state.map(e => {
+
+        console.log(e)
+        return(
+           <Marker key={e.id} latitude={e.latitude} longitude={e.longitude} >
+             <div>HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEllo</div>
+           </Marker>
+
+        )
+     })}
+    }
+
+
+    return(
+      <div>
+          <MapData
+          style="mapbox://styles/mapbox/streets-v9"
+          containerStyle={{
+            height: "60vh",
+            width: "60vw"         
+          }}  
+          center={[-77.0364, 38.8951]}>
+
+              {/* <Layer
+              type="symbol"
+              id="marker"
+              layout={{ "icon-image": "marker-15" }}
+              > */} */}
+
+                {renderingMap()}
+
+              {/* </Layer> */}
+          </MapData>
+      </div>
+    )
+}
+
+export default Map
 
 
 
@@ -155,6 +163,19 @@
 
 
 
+// var map = new mapboxgl.Map({
+//   container: 'map', // HTML container id
+//   style: 'mapbox://styles/mapbox/streets-v9', // style URL
+//   center: [-21.9270884, 64.1436456], // starting position as [lng, lat]
+//   zoom: 13
+// });
+
+// var popup = new mapboxgl.Popup()
+// .setHTML('<h3>Reykjavik Roasters</h3><p>A good coffee shop</p>');
+
+// var marker = new mapboxgl.Marker()
+// .setLngLat([-21.9270884, 64.1436456])
+// .addTo(map);
 
 
 
@@ -252,6 +273,18 @@
 //   longitude: -122.4376,
 //   zoom: 13
 // };
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const Map = ({ classes }) => {
 //   const client = useClient();
@@ -441,6 +474,20 @@
 //   );
 // };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const styles = {
 //   root: {
 //     display: "flex"
@@ -473,17 +520,3 @@
 // };
 
 // export default withStyles(styles)(Map);
-
-//                {/* Marker display loop */}
-//
-//             <Feature coordinates={[38.2700, 89.8603]}/>
-//
-//             </Layer>
-//
-//
-//         </MapData>
-//     )
-// }
-//
-// export default Map
-

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
+import '../index.scss'
 
 
 import Cards from './grid/Cards'
-// import Map from './map/Map'
+import Map from './map/Map'
 import Profile from "./Profile/Profile";
 import NavBar from './NavBar/NavBar';
 
@@ -42,11 +43,12 @@ function Home() {
       </div>
 
       <div className='homeComp'>
-        <CardsContext.Provider value={churches}>
+
+        <CardsContext.Provider value={churches} className='cardsHomeContainer'>
 
           <NavBar />
 
-          {/* <Map /> */}
+          <Map />
 
           <Cards />
 
