@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles/index.scss';
 
-import Home from "../components/Home.js";
-import Search from "../components/Search.js";
-import Login from '../components/Login/Login'
+import Home from "./components/Home";
+import Search from "./components/Search.js";
+import Login from './components/Login/Login';
 
 import { Route } from "react-router-dom";
 
