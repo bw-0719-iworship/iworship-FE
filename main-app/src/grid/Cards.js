@@ -1,7 +1,7 @@
 import React from "react";
 import CardsList from './CardsList'
 
-import { CardsContext } from '../context/CardsContext'
+import { CardsContext } from '../Components/context/CardsContext'
 import { useContext } from 'react';
 
 
