@@ -1,4 +1,3 @@
 [build]
-base = "main-app/"
-publish = "main-app/public"
+publish = "public"
 command = "hugo"
