@@ -3,7 +3,6 @@ import CardsList from './CardsList'
 
 
 
-
 export default function Cards({churches}) {
 
 
