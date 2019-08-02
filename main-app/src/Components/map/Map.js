@@ -24,7 +24,7 @@ import PlaceTwoTone from "@material-ui/icons/PlaceTwoTone";
 
 //   console.log(state)
 
-{/* <img src={require ('../../assets/drawing.svg')} alt='heart for churches' /> */}
+/* <img src={require ('../../assets/drawing.svg')} alt='heart for churches' /> */
 
 
 
@@ -89,8 +89,8 @@ export default function Map({churches}) {
   const [viewport, setViewport] = useState({
     latitude: 45.4211,
     longitude: -75.6903,
-    width: 500,
-    height: 700,
+    width: 700,
+    height: 550,
     zoom:8
   });
 
