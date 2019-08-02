@@ -89,8 +89,8 @@ export default function Map({churches}) {
   const [viewport, setViewport] = useState({
     latitude: 45.4211,
     longitude: -75.6903,
-    width: 500,
-    height: 700,
+    width: 700,
+    height: 550,
     zoom:8
   });
 
