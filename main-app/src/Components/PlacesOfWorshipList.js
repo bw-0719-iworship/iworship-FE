@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PlaceOfWorshipCard from "./PlaceOfWorshipCard.js";
 
-function Form(props) {
+function PlacesOfWorshipList(props) {
   const [placesOfWorship, setPlacesOfWorship] = useState([]);
 
   useEffect(() => {
@@ -14,53 +14,13 @@ function Form(props) {
       });
   }, []);
 
-  function handleSubmitZip() {
-
-  }
-
-  return(
-    <form onSubmit={handleSubmitZip}>
-      <label for="zip">
-        Zip
-        <input
-          type="text"
-          name="zip"
-          placeholder="00000"
-          value={placesOfWorship.name}
-        />
-      </label>
-      <label for="placeOfWorship">
-        Place of Worship
-        <input
-          type="text"
-          name="placeOfWorship"
-          placeholder="Name of Place of Worship"
-          value={placesOfWorship.id}
-        />
-      </label>
-      <label for="religion">
-        Religion
-        <input
-          type="dropdown"
-          name="religion"
-          placeholder="Select from dropdown"
-          value={placesOfWorship.id}
-        />
-      </label>
-      <label for="denomination">
-        Denomination
-        <input
-          type="dropdown"
-          name="denomination"
-          placeholder="Select from dropdown"
-          value={placesOfWorship.id}
-        />
-      </label>
-      <button type="submit">
-        Search
-      </button>
-    </form>
+  return (
+    <div>
+      {placesOfWorship.map(placeOfWorship => {
+        return <PlaceOfWorshipCard key={placeOfWorship.attributes.ID} name={placeOfWorship.attributes.NAME} />
+      })}
+    </div>
   );
 };
 
-export default Form;
+export default PlacesOfWorshipList;
