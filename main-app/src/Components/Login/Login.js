@@ -2,9 +2,16 @@ import React from "react";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { axiosAuth } from '../../axiosAuth/axiosAuth';
+import { Redirect } from "react-router-dom";
 
 
 function Login ({touched, errors, isSubmitting}){
+
+    const token = localStorage.getItem("token");
+
+    if (token) {
+        return <Redirect to="/home" />;
+    }
 
 
     return(
@@ -13,9 +20,9 @@ function Login ({touched, errors, isSubmitting}){
                 <label>Username</label>
 
                 <Field 
-                name='username'
-                type='text'
-                autoComplete='off' />
+                    name='username'
+                    type='text'
+                    autoComplete='off' />
 
                 <h3>{touched.username && errors.username}</h3>
             </div>
@@ -24,9 +31,9 @@ function Login ({touched, errors, isSubmitting}){
                 <label>Password</label>
 
                 <Field 
-                name='password'
-                type='password'
-                autoComplete='off' />
+                    name='password'
+                    type='password'
+                    autoComplete='off' />
 
                 <h3>{touched.password && errors.password}</h3>
             </div>
@@ -44,8 +51,8 @@ export default withFormik({
     
     mapPropsToValues(){
         return{
-            username: 'LambdaTestPerson',
-            password: 'everyDayImShuffling',
+            username: '',
+            password: '',
         }
     },
 
@@ -62,13 +69,13 @@ export default withFormik({
     handleSubmit(values, formikBag){
         const url = '/';
 
-        return axiosAuth().post(url, values).then(res =>{
+        return axiosAuth()
+        .post(url, values)
+        .then(res =>{
             console.log(res)
-            localStorage.setItem('useToken', res.data.payload);
+            localStorage.setItem("token", res.data.token);
             formikBag.resetForm();
-            formikBag.props.history.push('')
+            formikBag.props.history.push('/home')
         })
     }
-
-
 })(Login)

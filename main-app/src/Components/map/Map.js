@@ -24,7 +24,7 @@ import PlaceTwoTone from "@material-ui/icons/PlaceTwoTone";
 
 //   console.log(state)
 
-{/* <img src={require ('../../assets/drawing.svg')} alt='heart for churches' /> */}
+/* <img src={require ('../../assets/drawing.svg')} alt='heart for churches' /> */
 
 
 
