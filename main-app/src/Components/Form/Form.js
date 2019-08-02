@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 
-function Form() {
+function Form(props) {
   const [placesOfWorship, setPlacesOfWorship] = useState([]);
 
   function handleSubmitZip() {
+    {/* let zipArray = []
+    console.log("placesOfWorship", placesOfWorship);
 
-  }
+    return (
+      {props.filter(zip => {
+        if (zip === `${zip}`) {
+          return zipArray.push(zip)
+        }
+      })
+    ); */}
+  };
+
 
   return(
     <form onSubmit={handleSubmitZip}>

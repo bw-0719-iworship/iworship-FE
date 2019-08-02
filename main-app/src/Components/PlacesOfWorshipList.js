@@ -17,7 +17,16 @@ function PlacesOfWorshipList(props) {
   return (
     <div>
       {placesOfWorship.map(placeOfWorship => {
-        return <PlaceOfWorshipCard key={placeOfWorship.attributes.ID} name={placeOfWorship.attributes.NAME} />
+        return <PlaceOfWorshipCard key={placeOfWorship.attributes.ID} name={placeOfWorship.attributes.NAME}
+                                                                      address={placeOfWorship.attributes.ADDRESS}
+                                                                      city={placeOfWorship.attributes.CITY}
+                                                                      state={placeOfWorship.attributes.STATE}
+                                                                      zip={placeOfWorship.attributes.ZIP}
+                                                                      telephone={placeOfWorship.attributes.TELEPHONE}
+                                                                      subtype={placeOfWorship.attributes.SUBTYPE}
+                                                                      denom={placeOfWorship.attributes.DENOM}
+                                                                      attendance={placeOfWorship.attributes.ATTENDANCE}
+                                                                      cath={placeOfWorship.attributes.CATH}/>
       })}
     </div>
   );
